@@ -33,7 +33,7 @@ public class Tabung extends Lingkaran{
     }
     public Double getVolumeTabung(){
         
-        Double Volume=getR()*Tinggi;
+        Double Volume=getLuas()*Tinggi;
         return Volume;
     }
     
