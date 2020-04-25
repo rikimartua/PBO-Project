@@ -115,7 +115,7 @@ public class Main {
                             System.out.println("\n\n:::::Bangun Ruang:::::");
                             System.out.println("\n:::::LEVEL 3:::::");
                              System.out.println("\n====KERUCUT TERPANCUNG=====");
-                             System.out.print("Masukkan Tinggi Kerucut Kecil : ");   
+                             System.out.print("Masukkan Tinggi jari Kecil : ");   
                             jari2=input.nextDouble();
                              System.out.print("Masukkan Tinggi Kerucut Kecil : ");   
                             Tinggi2=input.nextDouble();
