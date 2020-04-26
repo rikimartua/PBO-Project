@@ -147,6 +147,7 @@ public class Main {
              
                 }catch (InputMismatchException e){
                     System.err.println("Input berupa angka!");
+                  input.nextLine();
                 }finally{
                     kembali = 'y';
                 }
