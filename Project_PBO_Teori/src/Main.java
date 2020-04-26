@@ -87,7 +87,7 @@ public class Main {
                             System.out.println("====JURING 3D=====");
                             System.out.print("Masukkan Tinggi  : ");   
                             Tinggi=input.nextDouble();
-                            System.out.println("Luas Permukaan = ");
+                            System.out.println("Luas Permukaan = "+juring.luasJuring(Sudut, jari));
                             System.out.println("Volume         = "+juring.volumeJuring(jari, Tinggi));
                             break;
                         case '3':
