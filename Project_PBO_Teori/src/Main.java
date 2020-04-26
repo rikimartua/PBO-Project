@@ -4,7 +4,11 @@ import BangundatarDanRuang.Kerucut;
 import BangundatarDanRuang.Lingkaran;
 import BangundatarDanRuang.Tabung;
 import BangundatarDanRuang.Tembereng;
+import java.awt.Component;
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -17,20 +21,25 @@ import java.util.Scanner;
  */
 public class Main {
 
+    private static Component rootPane;
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+      
         double jari,jari2,Tinggi ,s,Tinggi2;
         int menu;
         Double Sudut;
         char kembali,menu2,menu3;
         do {
+             try{
             System.out.print("Masukkan Jari-jari : ");    
             jari=input.nextDouble();
             Lingkaran lingkaran=new Lingkaran(jari);
             System.out.println("Luas Lingkaran = "+lingkaran.getLuas());
+          
             System.out.println(":::::MENU:::::");
             System.out.println("1. Bangun Datar");
             System.out.println("2. Bangun Ruang");
@@ -46,6 +55,7 @@ public class Main {
                     System.out.print("Silahkan Pilih : ");
                     menu2=input.next().charAt(0);
                     switch(menu2){
+                        
                         case '1':
                             System.out.print("Masukkan Besar sudut : ");   
                             Sudut=input.nextDouble();
@@ -84,7 +94,6 @@ public class Main {
                             System.out.println("\n====BUSUR=====");
                             System.out.println("Panjang Busur Tembereng = "+tembereng1.panjangBusur(Sudut, jari));
                             System.out.println("Panjang Busur Juring    = "+juring1.panjangBusur(Sudut, jari));
-                          
                             break;
                       
                     }
@@ -135,10 +144,19 @@ public class Main {
                     }
                     break;
             }
+             
+                }catch (InputMismatchException e){
+                    System.err.println("Input berupa angka!");
+                }finally{
+                    kembali = 'y';
+                }
+            
             System.out.print("Kembali ke menu? <y|n> : ");
             kembali = input.next().charAt(0);
+            
         } while (kembali == 'y' || kembali == 'Y');
 
+       
+        
     }
-
 }
