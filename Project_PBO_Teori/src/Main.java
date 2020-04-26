@@ -152,7 +152,14 @@ public class Main {
                 }catch (InputMismatchException e){
                     System.err.println("Input berupa angka!");
                   input.nextLine();
-                }
+                }catch(ArithmeticException ex){
+                    System.out.println("Tidak Boleh Menggunakan Pembagian dengan 0 (nol)");
+                    input.nextLine();
+               }  catch(Exception er){
+                    System.out.println("Hasil UnDefine dengan nilai 0");
+                    input.nextLine();
+               }  
+            
             
             System.out.print("Kembali ke menu? <y|n> : ");
             kembali = input.next().charAt(0);
