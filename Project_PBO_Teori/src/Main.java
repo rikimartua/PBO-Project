@@ -34,15 +34,16 @@ public class Main {
             System.out.println(":::::MENU:::::");
             System.out.println("1. Bangun Datar");
             System.out.println("2. Bangun Ruang");
-            System.out.println("Silahkan Pilih : ");
+            System.out.print("Silahkan Pilih : ");
             menu = input.nextInt();
             switch (menu) {
                 case 1:
                     System.out.println("\n:::::Bangun Datar:::::");
-                     System.out.println("\n:::::LEVEL 2:::::");
+                    System.out.println("\n:::::LEVEL 2:::::");
                     System.out.println("1. Tembereng 2D");
                     System.out.println("2. Juring 2D");
                     System.out.println("3. Busur");
+                    System.out.print("Silahkan Pilih : ");
                     menu2=input.next().charAt(0);
                     switch(menu2){
                         case '1':
