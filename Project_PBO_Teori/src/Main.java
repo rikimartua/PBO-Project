@@ -71,7 +71,7 @@ public class Main {
                             System.out.println(":::::LEVEL 3:::::");
                             System.out.println("====TEMBERENG 3D=====");
                             Tembereng3D tembereng3 = new Tembereng3D(jari, jarakpusat);
-                            System.out.println("Luas Permukaan = ");
+                            System.out.println("Luas Permukaan = " + tembereng3.LuasTembereng3D(jari, jarakpusat));
                             System.out.println("Volume         = " + tembereng3.VolumeTembereng3D(jari, jarakpusat));
                             break;
                         case '2':
