@@ -135,7 +135,7 @@ public class Main {
                     }
                     break;
             }
-            System.out.println("Kembali ke menu? <y/n> : ");
+            System.out.print("Kembali ke menu? <y/n> : ");
             kembali = input.next().charAt(0);
         } while (kembali == 'y' || kembali == 'Y');
 
