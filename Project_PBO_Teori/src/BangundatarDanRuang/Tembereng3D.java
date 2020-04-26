@@ -20,9 +20,9 @@ public class Tembereng3D extends Tembereng {
 
     public double VolumeTembereng3D(double r, double t) {
         double jari = r * r * r;
-        double hasilVolumeBola = (Math.PI * 4 * jari / 3);
+        //double hasilVolumeBola = (Math.PI * 4 * jari / 3);
         double tinggi = t * t;
-        double hasilVolumeTembereng = (hasilVolumeBola - ((Math.PI * tinggi) / 3) * (3 * r - t));
+        double hasilVolumeTembereng = (volumeBola() - ((Math.PI * tinggi) / 3) * (3 * r - t));
         return hasilVolumeTembereng;
     }
 
