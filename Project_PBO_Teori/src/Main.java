@@ -19,7 +19,7 @@ import java.util.Scanner;
  */
 /**
  *
- * @author Willian Kelvin Nata - 123180004
+ * @author HP
  */
 public class Main {
 
@@ -152,10 +152,11 @@ public class Main {
             }
              
                 }catch (InputMismatchException e){
-                    System.err.println("Input berupa angka!");
+                    System.err.println("Input berupa angka Tidak Boleh Huruf!");
                   input.nextLine();
-                }catch(ArithmeticException ex){
-                    System.out.println("Tidak Boleh Menggunakan Pembagian dengan 0 (nol)");
+                }catch(ArithmeticException exception){
+                    System.out.println("Exception: Suatu integer "
+						+ "tidak dapat dibagi oleh nol!");
                     input.nextLine();
                }  catch(Exception er){
                     System.out.println("Hasil UnDefine dengan nilai 0");
