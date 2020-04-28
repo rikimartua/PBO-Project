@@ -1,6 +1,7 @@
 
 import BangundatarDanRuang.Juring;
 import BangundatarDanRuang.Kerucut;
+import BangundatarDanRuang.KerucutTerpancung;
 import BangundatarDanRuang.Lingkaran;
 import BangundatarDanRuang.Tabung;
 import BangundatarDanRuang.Tembereng;
@@ -8,7 +9,7 @@ import BangundatarDanRuang.Tembereng3D;
 import java.awt.Component;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import javax.swing.JOptionPane;
+
 
 
 /*
@@ -128,13 +129,14 @@ public class Main {
                             System.out.println("Volume Kerucut = "+kerucut.volumeKerucut(jari, Tinggi));
                             System.out.println("\n\n:::::Bangun Ruang:::::");
                             System.out.println("\n:::::LEVEL 3:::::");
-                             System.out.println("\n====KERUCUT TERPANCUNG=====");
-                             System.out.print("Masukkan Tinggi jari Kecil : ");   
+                            System.out.println("\n====KERUCUT TERPANCUNG=====");
+                            KerucutTerpancung ke=new KerucutTerpancung(jari);
+                            System.out.print("Masukkan Tinggi jari Kecil : ");   
                             jari2=input.nextDouble();
-                             System.out.print("Masukkan Tinggi Kerucut Kecil : ");   
+                            System.out.print("Masukkan Tinggi Kerucut Kecil : ");   
                             Tinggi2=input.nextDouble();
-                            System.out.println("Luas Permukaan = "+kerucut.luasKerucutPancung(jari2, jari, Tinggi));
-                            System.out.println("Volume         = "+kerucut.volumeKerucutPancung(jari2, jari, Tinggi2, Tinggi));
+                            System.out.println("Luas Permukaan = "+ke.luasKerucutPancung(jari2, jari, Tinggi));
+                            System.out.println("Volume         = "+ke.volumeKerucutPancung(jari2, jari, Tinggi2, Tinggi));
                             break;
                         case '3':
                             System.out.print("Masukkan Tinggi : ");    
