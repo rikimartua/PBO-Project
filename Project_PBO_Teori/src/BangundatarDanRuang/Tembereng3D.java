@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package BangundatarDanRuang;
 
 /**
  *
- * @author ASUS
+ * @author HP
  */
 public class Tembereng3D extends Tembereng {
 
@@ -23,6 +19,9 @@ public class Tembereng3D extends Tembereng {
         //double hasilVolumeBola = (Math.PI * 4 * jari / 3);
         double tinggi = t * t;
         double hasilVolumeTembereng = (volumeBola(r) - ((Math.PI * tinggi) / 3) * (3 * r - t));
+          if(hasilVolumeTembereng  == 0){		
+			throw new ArithmeticException("Angka pembagi tidak boleh nol!");
+		}
         return hasilVolumeTembereng;
     }
     public double LuasTembereng3D(double r, double t) {
@@ -30,6 +29,9 @@ public class Tembereng3D extends Tembereng {
         //double hasilVolumeBola = (Math.PI * 4 * jari / 3);
         double tinggi = t * t;
         double hasilLuasTembereng = 2*Math.PI*r*t;
+         if(hasilLuasTembereng  == 0){		
+			throw new ArithmeticException("Angka pembagi tidak boleh nol!");
+		}
         return hasilLuasTembereng;
     }
 
