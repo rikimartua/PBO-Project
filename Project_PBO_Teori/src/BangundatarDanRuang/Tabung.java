@@ -7,7 +7,7 @@ package BangundatarDanRuang;
 
 /**
  *
- * @author RIKI MARTUA
+ * @author HP
  */
 public class Tabung extends Lingkaran{
     
@@ -29,11 +29,17 @@ public class Tabung extends Lingkaran{
     public Double getLuasTabung(){
         
         Double Luas=(4*Math.PI*super.r)+(4*Math.PI*super.r*Tinggi);
+           if(Luas == 0){		
+			throw new ArithmeticException("Angka pembagi tidak boleh nol!");
+		}
         return Luas;
     }
     public Double getVolumeTabung(){
         
         Double Volume=getLuas()*Tinggi;
+        if(Volume == 0){		
+			throw new ArithmeticException("Angka pembagi tidak boleh nol!");
+		}
         return Volume;
     }
     
