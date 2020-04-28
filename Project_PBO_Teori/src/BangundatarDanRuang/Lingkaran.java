@@ -22,10 +22,12 @@ public class Lingkaran implements Datar{
     }
     
     @Override
+   
     public double getLuas() {
        double luas= Math.PI * r * r;
+       if(luas == 0){		
+			throw new ArithmeticException("Angka pembagi tidak boleh nol!");
+		}	
        return luas;
-    }
- 
-    
+    }   
 }
