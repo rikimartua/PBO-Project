@@ -5,10 +5,7 @@
  */
 package BangundatarDanRuang;
 
-/**
- *
- * @author RIKI MARTUA
- */
+
 public class Kerucut extends Lingkaran{
 
     /*
@@ -19,16 +16,22 @@ public class Kerucut extends Lingkaran{
     t1 = tinggi kerucut kecil
     */
     public Kerucut(double r) {
-        super(r);
+        super(r);// jadi dia mengambil r maka super akan merepresentasikan objek dari class induk.
     }
     
      public double luasKerucut(double r, double s){
         double hasilLuasKerucut = Math.PI*r*(s+r);
+        if(hasilLuasKerucut == 0){		
+			throw new ArithmeticException("Angka pembagi tidak boleh nol!");
+		}
         return hasilLuasKerucut;
     }
     
    public double volumeKerucut(double r, double t){
         double hasilVolumeKerucut = Math.PI*r*r*t/3;
+        if(hasilVolumeKerucut == 0){		
+			throw new ArithmeticException("Angka pembagi tidak boleh nol!");
+		}
         return hasilVolumeKerucut;
     }
     
@@ -36,6 +39,9 @@ public class Kerucut extends Lingkaran{
         double a = t+Math.pow(r-r1,2);
         double A = Math.sqrt(a);
         double hasilLuasKerucutPancung = Math.PI*A*(r1+r)+Math.PI*(Math.pow(r1, 2)+Math.pow(r,2));
+        if(hasilLuasKerucutPancung == 0){		
+			throw new ArithmeticException("Angka pembagi tidak boleh nol!");
+		}
         return hasilLuasKerucutPancung;
     }
     
@@ -44,6 +50,9 @@ public class Kerucut extends Lingkaran{
         double kerucut2 = volumeKerucut(r,t);
         double kerucut1 = volumeKerucut(r1,t1);
         double hasilVolumeKerucutPancung = kerucut2 - kerucut1;
+         if(hasilVolumeKerucutPancung == 0){		
+			throw new ArithmeticException("Angka pembagi tidak boleh nol!");
+		}
         return hasilVolumeKerucutPancung;
     }
     
