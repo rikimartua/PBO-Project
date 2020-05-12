@@ -11,13 +11,10 @@ package PlanetUlala;
  */
 public class Bumi extends TataSurya {
     
-    /**
-     *
-     * @param r
-     * @param orbit
-     * @param kalarotasi
-     * @param kalarevolusi
-     */
+ //    keliling orbit = 937 jam
+//    double kalarotasi = 23,93 jam
+//    double kalarevolusi = 8740,672 jam
+    
     public Bumi (double r, double orbit,double kalarotasi,double kalarevolusi){
         super(r,orbit,kalarotasi,kalarevolusi);
     }
