@@ -23,5 +23,10 @@ public class Bola extends Lingkaran{
 		}
         return hasilVolumeBola;
     }
+   public double LuasPermukaan(){
+        
+       double LuasPermukaan=4*getLuas();
+       return LuasPermukaan;
+    }
     
 }
