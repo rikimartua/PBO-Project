@@ -30,4 +30,8 @@ public class Lingkaran implements Datar{
 		}	
        return luas;
     }   
+	public double Keliling(){
+        keliling = 2 * Math.PI * r;
+        return keliling;
+    }
 }
